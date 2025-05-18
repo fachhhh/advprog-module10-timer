@@ -77,7 +77,19 @@ fn main() {
         println!("Fachri's Computer: done!!!");
     });
 
+    spawner.spawn(async {
+        println!("Fachri's Computer: howdy!!");
+        Timer::new(Duration::new(2, 0)).await;
+        println!("Fachri's Computer: done!!");
+    });
+
+    spawner.spawn(async {
+        println!("Fachri's Computer: howdy!");
+        Timer::new(Duration::new(2, 0)).await;
+        println!("Fachri's Computer: done!");
+    });
+
     println!("Fachri's Computer: hey hey not bad :/");
-    drop(spawner);
+    //drop(spawner);
     executor.run();
 }
