@@ -76,6 +76,8 @@ fn main() {
         Timer::new(Duration::new(2, 0)).await;
         println!("Fachri's Computer: done!!!");
     });
+
+    println!("Fachri's Computer: hey hey not bad :/");
     drop(spawner);
     executor.run();
 }
